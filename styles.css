@@ -1,0 +1,39 @@
+h1 {
+    text-align: center;
+}
+
+#new-grid-btn {
+    width: 150px;
+    padding: 10px 0;
+    margin: 10px auto;
+    display: block;
+    align-content: center;
+}
+
+#container {
+    display: flex;
+    width: 800px;
+    height: 800px;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.column {
+    width: 100%;
+}
+
+.cell {
+    margin: 0px;
+    border: 1px black solid;
+}
+
+.cell:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+
+}
+
+.cell:hover {
+    background-color: black;
+}
