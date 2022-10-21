@@ -12,8 +12,8 @@ h1 {
 
 #container {
     display: flex;
-    width: 800px;
-    height: 800px;
+    width: 700px;
+    height: 700px;
     margin: auto;
     border: 1px solid black;
 }
@@ -37,3 +37,24 @@ h1 {
 .cell:hover {
     background-color: black;
 }
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-top:20px;
+    padding-bottom:20px;
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: rgb(29, 29, 29);
+  }
+  
+  footer a {
+    color: #f01515;
+  }
+  
+  footer a:hover {
+    color: #a00c0c;
+  }
