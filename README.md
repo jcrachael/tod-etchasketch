@@ -7,7 +7,8 @@ An interactive drawing application based off the famous Etch-a-Sketch, powered b
 
 A modal pop-up box appears and disappears as required by the user.
 
-
+## To-do:
+- allow "Enter" key to submit user input in modal (using javascript)
 
 ----------------------------------------------------------------
 
