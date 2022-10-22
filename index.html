@@ -4,18 +4,35 @@
         <title>Etch-a-Sketch!</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="styles.css">
-        
     </head>
-    <body>
-        <h1>Etch-a-Sketch</h1>
-        
-        <div id="container">
 
+    <body>
+        <div id="main-content">
+            <h1>Etch-a-Sketch</h1>
+                <div id="container"><!-- cells go here --></div>
+
+                <div class="circles">
+                    <button class="circle toggle" id="grayscale-btn">Grayscale</button>
+                    <button id="new-grid-btn">New grid</button>
+                    <button id="clear-grid-btn">Clear grid</button>
+                    <button class="circle toggle" id="rainbow-btn">Rainbow</button>
+                </div>
         </div>
-        <button id="new-grid-btn">New grid</button>
-        <footer>
-            Copyright © Rachael Cole 2022. This project is&nbsp;<a href="https://github.com/jcrachael/tod-etch-a-sketch/">open source</a>.
-        </footer>
+
+        <footer>Copyright © Rachael Cole 2022. This project is&nbsp;<a href="https://github.com/jcrachael/tod-etch-a-sketch/">open source</a>.</footer>
+        
+
+        <div id="modal">
+         
+                <label for="grid-size">Please select a grid size</label>
+                <p id="warning">Please choose a number between <br> 1 and 100!</p>
+                <input type="number" name="grid-size" id="grid-size" placeholder="16" min="1" max="100">
+                <button class="modal-btn" id="modal-ok">OK</button> 
+                <button type="reset" class="modal-btn" id="modal-cancel">Cancel</button>
+     
+        </div>
+
         <script src="scripts.js"></script>
+
     </body>
 </html>

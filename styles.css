@@ -1,21 +1,76 @@
-h1 {
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #FAACA8;
+    background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+    height: 100vh;
 }
 
-#new-grid-btn {
-    width: 150px;
+h1 {
+    position: absolute;
+    margin-top: 7px;
+    width: 320px;
+    margin-left: 190px;
+    color: gold;
+    font-size: 36pt;
+    letter-spacing: 1pt;
+    font-family: 'Pacifico', 'Roboto', sans-serif;
+    text-shadow: -2px 2px 1px rgba(0,0,0,0.5);
+}
+
+#new-grid-btn, #clear-grid-btn {
+    width: 130px;
     padding: 10px 0;
     margin: 10px auto;
     display: block;
     align-content: center;
 }
 
+
+#main-content {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+
+    width: 700px;
+}
+
 #container {
     display: flex;
+    width: 500px;
+    height: 500px;
+    margin: auto;  
+    border: 100px solid #db2020;
+    border-radius: 30px;
+    background-color: lightgray;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+}
+
+.circles {
+    display: flex;
     width: 700px;
-    height: 700px;
-    margin: auto;
-    border: 1px solid black;
+    justify-content: space-between;
+    margin-top: -90px;
+}
+
+.circle {
+    height: 70px;
+    width: 70px;
+    margin: 0px 20px 0px 20px;
+    background: rgb(65,65,65);
+    background: linear-gradient(36deg, rgba(65,65,65,1) 0%, rgba(135,135,135,1) 49%, rgba(189,189,189,1) 100%);
+    box-shadow: -2px 2px lightgray inset;
+    border-radius: 75px;
+}
+
+.toggle {
+    font-size: smaller;
 }
 
 .column {
@@ -23,27 +78,65 @@ h1 {
 }
 
 .cell {
+    background-color: lightgray;
     margin: 0px;
-    border: 1px black solid;
+    border: 1px rgba(0,0,0,0.1) dotted;
 }
 
 .cell:after {
     content: "";
     display: block;
     padding-bottom: 100%;
-
 }
 
-.cell:hover {
+.cell:active {
     background-color: black;
+}
+
+.modal-btn {
+    background: #db2020;
+    box-shadow: none;
+    color: white;
+    padding: 5px 15px;
+    margin: 0px 10px;
+}
+
+.modal-btn:hover {
+    background: #990b0b;
+    box-shadow: none;
+    color: white;
+    padding: 5px 15px;
+    margin: 0px 10px;
+}
+
+
+
+button {
+    cursor: pointer;
+    background: rgb(65,65,65);
+    background: linear-gradient(36deg, rgba(65,65,65,1) 0%, rgba(135,135,135,1) 49%, rgba(189,189,189,1) 100%);
+    box-shadow: -2px 2px lightgray inset;
+    border-radius: 75px;
+    border:none;
+    font-size: 14pt;
+    
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: -1px 1px 1px rgba(0,0,0,0.5);
+    font-family: 'Roboto', sans-serif;
+    text-transform: none;
+}
+
+button:active {
+    background: rgb(135,135,135);
+    background: linear-gradient(310deg, rgba(135,135,135,1) 3%, rgba(69,69,69,1) 59%, rgba(65,65,65,1) 100%);
+    box-shadow: 2px -2px #333 inset;
+    border: 1px #333 solid;
 }
 
 footer {
     position: absolute;
-    left: 0;
     bottom: 0;
-    padding-top:20px;
-    padding-bottom:20px;
+    
     width: 100%;
     text-align: center;
     font-family: sans-serif;
@@ -58,3 +151,43 @@ footer {
   footer a:hover {
     color: #a00c0c;
   }
+
+  *:focus {outline:none !important}
+
+#modal {
+    text-align: center;
+    opacity: 1;
+    background-color: white;
+    border-radius: 15px;
+    font-size: 13pt;
+    font-weight: bold;
+    width: 200px;
+    padding: 30px 30px;
+    box-shadow: 0px  10px 15px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in-out;
+}
+
+#modal input {
+    margin: 0px 0px 30px 0px;
+    padding: 5px;
+    width: 95%;
+    height: 40px;
+    border-radius: 15px;
+    border: 2px lightgray solid;
+    font-size: 14pt;
+}
+
+#modal input:focus {
+    border: 2px #db2020 solid;
+}
+
+#modal p {
+    font-size: 9pt;
+    padding: 0px;
+    color: #db2020;
+    font-weight: normal;
+}
