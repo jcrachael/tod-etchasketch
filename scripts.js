@@ -23,6 +23,7 @@ modalCancel.addEventListener("click", function() {
     userInput.value = null;
     modal.style.opacity = '0';
     warning.style.opacity = '0';
+    modal.style.zIndex = -1;
 })
 
 
