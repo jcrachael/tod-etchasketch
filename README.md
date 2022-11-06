@@ -1,4 +1,7 @@
 # Etch-a-Sketch
+
+![](demo.png)
+
 View live demo: https://jcrachael.github.io/tod-etchasketch/
 
 The Odin Project Foundations course: https://www.theodinproject.com/lessons/foundations-etch-a-sketch
